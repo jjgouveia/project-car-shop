@@ -24,4 +24,12 @@ export default class CarService {
 
     return result;
   }
+
+  public async getById(id: string) {
+    const carODM = new CarODM();
+    const request = carODM.findById(id);
+    const result = this.createCarDomain(await request);
+
+    return result;
+  }
 }
