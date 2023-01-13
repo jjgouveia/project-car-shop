@@ -32,4 +32,15 @@ export default class CarController {
       this.next(error as Error);
     }
   };
+
+  public getACarById = async () => {
+    const { id } = this.req.params;
+    try {
+      const request = await this.service.getById(id);
+      if (!request) return this.res.status(404).json({ message: 'Car not found' });
+      return this.res.status(200).json(request);
+    } catch (error) {
+      return this.res.status(422).json({ message: 'Invalid mongo id' });
+    }
+  };
 }

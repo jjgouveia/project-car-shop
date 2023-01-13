@@ -15,7 +15,7 @@ export default class Car extends Vehicle {
     doorsQty,
     seatsQty }: ICar) {
     super(_id, model, year, color, status, buyValue);
-    
+
     this.doorsQty = doorsQty;
     this.seatsQty = seatsQty;
   }
