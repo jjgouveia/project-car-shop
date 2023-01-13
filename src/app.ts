@@ -1,6 +1,7 @@
 import console from 'console';
 import * as express from 'express';
 import ErrorHandler from './middlewares/ErrorHandler';
+import routes from './routes/Routes';
 
 class App {
   public app: express.Express;
@@ -28,6 +29,7 @@ class App {
 
     this.app.use(express.json());
     this.app.use(accessControl);
+    this.app.use(routes);
     this.app.use(ErrorHandler.handle);
   }
   
