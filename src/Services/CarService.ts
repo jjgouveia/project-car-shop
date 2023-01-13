@@ -16,4 +16,12 @@ export default class CarService {
 
     return this.createCarDomain(newCar);
   }
+
+  public async getAll() {
+    const carODM = new CarODM();
+    const request = carODM.find();
+    const result = (await request).map((car) => this.createCarDomain(car));
+
+    return result;
+  }
 }
