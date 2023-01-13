@@ -7,14 +7,14 @@ class Vehicle {
   protected buyValue: number;
   
   constructor(
-    _id: string | undefined,
+    id: string | undefined,
     model: string,
     year: number,
     color: string,
     status: boolean | undefined,
     buyValue: number,
   ) {
-    this.id = _id;
+    this.id = id;
     this.model = model;
     this.year = year;
     this.color = color;

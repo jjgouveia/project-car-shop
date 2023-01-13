@@ -6,7 +6,7 @@ export default class Car extends Vehicle {
   private seatsQty: number;
 
   constructor({ 
-    _id,
+    id,
     model,
     year,
     color,
@@ -14,7 +14,7 @@ export default class Car extends Vehicle {
     buyValue,
     doorsQty,
     seatsQty }: ICar) {
-    super(_id, model, year, color, status, buyValue);
+    super(id, model, year, color, status, buyValue);
 
     this.doorsQty = doorsQty;
     this.seatsQty = seatsQty;
