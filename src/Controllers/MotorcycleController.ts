@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import MotorcycleService from '../Services/MotorcycleService';
 
-export default class CarController {
+export default class MotorcycleController {
   private req: Request;
   private res: Response;
   private next: NextFunction;
