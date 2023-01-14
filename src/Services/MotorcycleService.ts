@@ -40,4 +40,9 @@ export default class MotorcycleService {
 
     return this.createMotorcycleDomain(update);
   }
+
+  public async destroy(id: string) {
+    const motorcycleODM = new MotorcycleODM();
+    return motorcycleODM.delete(id);
+  }
 }
