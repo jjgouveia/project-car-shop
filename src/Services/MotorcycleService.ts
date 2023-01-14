@@ -32,4 +32,12 @@ export default class MotorcycleService {
 
     return result;
   }
+  
+  public async update(id: string, newInfo: IMotorcycle) {
+    const motorcycleODM = new MotorcycleODM();
+
+    const update = await motorcycleODM.update(id, newInfo);
+
+    return this.createMotorcycleDomain(update);
+  }
 }
