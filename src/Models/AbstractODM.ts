@@ -41,8 +41,8 @@ export default abstract class AbstractVehicleODM<T> {
     );
   }
   
-  async delete(id: string): Promise<T | null> {
-    if (!isValidObjectId(id)) throw Error(INVALID_MONGOID_SENTENCE);
-    return this.model.findByIdAndDelete(id);
+  async delete(_id: string): Promise<T | null> {
+    if (!isValidObjectId(_id)) throw Error(INVALID_MONGOID_SENTENCE);
+    return this.model.findByIdAndDelete(_id);
   }
 } 

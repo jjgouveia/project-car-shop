@@ -40,4 +40,9 @@ export default class CarService {
 
     return this.createCarDomain(update);
   }
+
+  public async destroy(id: string) {
+    const carODM = new CarODM();
+    return carODM.delete(id);
+  }
 }
